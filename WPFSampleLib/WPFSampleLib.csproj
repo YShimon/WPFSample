@@ -50,21 +50,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\UserControl2.xaml.cs">
-      <DependentUpon>UserControl2.xaml</DependentUpon>
-    </Compile>
-    <Page Include="Controls\SampleNodeControl01.xaml">
+    <Page Include="Controls\Staff.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Controls\SampleNodeControl01.xaml.cs">
-      <DependentUpon>SampleNodeControl01.xaml</DependentUpon>
+    <Compile Include="Controls\Staff.xaml.cs">
+      <DependentUpon>Staff.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Controls\UserControl2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -5,9 +5,9 @@ namespace WPFSampleLib
     /// <summary>
     /// UserControl1.xaml の相互作用ロジック
     /// </summary>
-    public partial class SampleNodeControl01 : UserControl
+    public partial class Staff : UserControl
     {
-        public SampleNodeControl01()
+        public Staff()
         {
             InitializeComponent();
         }

@@ -12,33 +12,44 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="{Binding Title.Value}"
-        Height="300" Width="150">
+        ResizeMode="NoResize" 
+        Height="280" Width="300">
 
     <Grid>
-        <StackPanel>
-            <!--WPF基本機能-->
-            <Label Content="WPF基本機能"/>
-            <Button Content="Behavior" Margin="5" Command="{Binding ShowBehavior}">
-                <ToolTipService.ToolTip>
-                    <ToolTip Content="WPFのBehavior/Eventのサンプル"/>
-                </ToolTipService.ToolTip>
-            </Button>
-                
-            <!--WPF Tips-->
-            <Label Content="WPF Tips"/>
-            <Button Content="コントロール移動" Margin="5" Command="{Binding ShowControlMove}">
-                <ToolTipService.ToolTip>
-                    <ToolTip Content="Canvas上のThumbコントロールをドラッグして移動する"/>
-                </ToolTipService.ToolTip>
-            </Button>
-            <Button Content="Avalondock" Margin="5" Command="{Binding ShowAvalondock}">
-                <ToolTipService.ToolTip>
-                    <ToolTip Content="Avalondockのサンプル"/>
-                </ToolTipService.ToolTip>
-            </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="100" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
 
-            <!--Region-->
-            <!--<ContentControl prism:RegionManager.RegionName="ContentRegion" Height="30"/>-->
-        </StackPanel>
+        <!--WPF基本機能-->
+        <Label Grid.Row="0" Content="WPF基本機能"/>
+        <Button Grid.Row="1" Grid.Column="0" Content="Behavior" Margin="5" Height="90" Command="{Binding ShowBehavior}">
+            <ToolTipService.ToolTip>
+                <ToolTip Content="WPFのBehavior/Eventのサンプル"/>
+            </ToolTipService.ToolTip>
+        </Button>
+
+        <!--WPF Tips-->
+        <Label Grid.Row="2" Content="WPF Tips"/>
+        <Button Grid.Row="3" Content="コントロール&#10;&#160;&#160;&#160;移動" Margin="5" Height="90" Command="{Binding ShowControlMove}">
+            <ToolTipService.ToolTip>
+                <ToolTip Content="Canvas上のThumbコントロールをドラッグして移動する"/>
+            </ToolTipService.ToolTip>
+        </Button>
+        <Button Grid.Row="3" Grid.Column="1" Content="Avalon&#10;&#160;&#160;Dock" Margin="5" Height="90" Command="{Binding ShowAvalondock}">
+            <ToolTipService.ToolTip>
+                <ToolTip Content="Avalondockのサンプル"/>
+            </ToolTipService.ToolTip>
+        </Button>
+
+        <!--Region-->
+        <!--<ContentControl prism:RegionManager.RegionName="ContentRegion" Height="30"/>-->
     </Grid>
 </metro:MetroWindow>
