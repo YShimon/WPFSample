@@ -1,0 +1,44 @@
+﻿<metro:MetroWindow x:Class="WPFSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="11"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="{Binding Title.Value}"
+        Height="300" Width="150">
+
+    <Grid>
+        <StackPanel>
+            <!--WPF基本機能-->
+            <Label Content="WPF基本機能"/>
+            <Button Content="Behavior" Margin="5" Command="{Binding ShowBehavior}">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="WPFのBehavior/Eventのサンプル"/>
+                </ToolTipService.ToolTip>
+            </Button>
+                
+            <!--WPF Tips-->
+            <Label Content="WPF Tips"/>
+            <Button Content="コントロール移動" Margin="5" Command="{Binding ShowControlMove}">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="Canvas上のThumbコントロールをドラッグして移動する"/>
+                </ToolTipService.ToolTip>
+            </Button>
+            <Button Content="Avalondock" Margin="5" Command="{Binding ShowAvalondock}">
+                <ToolTipService.ToolTip>
+                    <ToolTip Content="Avalondockのサンプル"/>
+                </ToolTipService.ToolTip>
+            </Button>
+
+            <!--Region-->
+            <!--<ContentControl prism:RegionManager.RegionName="ContentRegion" Height="30"/>-->
+        </StackPanel>
+    </Grid>
+</metro:MetroWindow>
