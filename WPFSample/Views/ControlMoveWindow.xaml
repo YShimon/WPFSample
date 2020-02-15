@@ -25,7 +25,7 @@
             <Thumb.Template>
                 <ControlTemplate TargetType="Thumb">
                     <StackPanel>
-                        <uc:SampleNodeControl01 Width="350" Height="300"/>
+                        <uc:Staff/>
                     </StackPanel>
                 </ControlTemplate>
             </Thumb.Template>

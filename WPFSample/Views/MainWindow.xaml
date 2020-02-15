@@ -12,6 +12,7 @@
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
         Title="{Binding Title.Value}"
+        ResizeMode="NoResize" 
         Height="280" Width="300">
 
     <Grid>
